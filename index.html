@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Studyflow</title>
+  </head>
+
+  <body>
+    <nav>
+      <div class="navDiv">
+        <div class="navDivLeft">
+          <a href="#hero" class="current">Home</a>
+          <a href="#features">Features</a>
+          <a href="#pricing">Pricing</a>
+        </div>
+        <div class="contactDiv">
+          <a href="#signup" class="button">Get app</a>
+        </div>
+      </div>
+    </nav>
+
+    <main>
+      <section class="hero" id="hero">
+        <div class="heroText">
+          <p class="chip">New: exam countdowns</p>
+          <h1>Plan your semester without the stress.</h1>
+          <p>
+            Studyflow turns your syllabus into a calm, day-by-day plan. Track assignments,
+            focus in short sessions and never miss a deadline again.
+          </p>
+          <div class="buttonGroup">
+            <a href="#signup" class="button">Start for free</a>
+            <a href="#steps" class="button buttonOutline">See how it works</a>
+          </div>
+        </div>
+
+        <div class="heroCard">
+          <p class="heroCardTitle">Today</p>
+          <div class="task">
+            <span class="dot done"></span>
+            <p>Read chapter 4 – CSS Grid</p>
+          </div>
+          <div class="task">
+            <span class="dot"></span>
+            <p>Assignment 2 – landing page</p>
+          </div>
+          <div class="task">
+            <span class="dot"></span>
+            <p>Revise for Math quiz</p>
+          </div>
+          <div class="progress">
+            <div class="progressBar"></div>
+          </div>
+          <p class="small">1 of 3 tasks done</p>
+        </div>
+      </section>
+
+      <section class="features" id="features">
+        <h2>Everything you need to stay on track</h2>
+        <div class="cards">
+          <div class="card">
+            <h3>Smart planner</h3>
+            <p>Add your deadlines once and Studyflow spreads the work across the weeks before them.</p>
+          </div>
+          <div class="card">
+            <h3>Focus timer</h3>
+            <p>Work in 25 minute sessions with short breaks, and see how many hours you studied.</p>
+          </div>
+          <div class="card">
+            <h3>Reminders</h3>
+            <p>Get a gentle reminder the day before something is due, not the hour before.</p>
+          </div>
+          <div class="card">
+            <h3>Study groups</h3>
+            <p>Share a plan with classmates and split up the work on group projects.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="steps" id="steps">
+        <h2>How it works</h2>
+        <div class="stepList">
+          <div class="step">
+            <p class="stepNumber">1</p>
+            <h3>Add your courses</h3>
+            <p>Type in your courses or import them from your university calendar.</p>
+          </div>
+          <div class="step">
+            <p class="stepNumber">2</p>
+            <h3>Set your deadlines</h3>
+            <p>Add assignments, quizzes and exams with their due dates.</p>
+          </div>
+          <div class="step">
+            <p class="stepNumber">3</p>
+            <h3>Follow the plan</h3>
+            <p>Open the app each day and just do what is on your list.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="pricing" id="pricing">
+        <h2>Simple pricing</h2>
+        <div class="plans">
+          <div class="plan">
+            <h3>Free</h3>
+            <p class="price">$0<span>/month</span></p>
+            <ul>
+              <li>Up to 4 courses</li>
+              <li>Focus timer</li>
+              <li>Deadline reminders</li>
+            </ul>
+            <a href="#signup" class="button buttonOutline">Choose Free</a>
+          </div>
+          <div class="plan planHighlight">
+            <p class="chip">Most popular</p>
+            <h3>Student</h3>
+            <p class="price">$3<span>/month</span></p>
+            <ul>
+              <li>Unlimited courses</li>
+              <li>Study groups</li>
+              <li>Weekly progress reports</li>
+            </ul>
+            <a href="#signup" class="button">Choose Student</a>
+          </div>
+          <div class="plan">
+            <h3>Campus</h3>
+            <p class="price">$1<span>/student</span></p>
+            <ul>
+              <li>Everything in Student</li>
+              <li>Admin dashboard</li>
+              <li>Calendar integration</li>
+            </ul>
+            <a href="#signup" class="button buttonOutline">Contact us</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="reviews" id="reviews">
+        <h2>What students say</h2>
+        <div class="reviewList">
+          <div class="review">
+            <p>"I stopped pulling all-nighters before deadlines. The plan just tells me what to do each day."</p>
+            <p class="reviewName">Maya, 2nd year Law</p>
+          </div>
+          <div class="review">
+            <p>"The focus timer is the only thing that keeps me off my phone while studying."</p>
+            <p class="reviewName">Karim, 3rd year Engineering</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="signup" id="signup">
+        <form action="#">
+          <h2>Get early access</h2>
+          <p>Join the waiting list and we will send you a download link.</p>
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email">
+          <button type="submit">Join the list</button>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p class="logo">Studyflow</p>
+      <div class="footerLinks">
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#reviews">Reviews</a>
+        <a href="#signup">Sign up</a>
+      </div>
+      <p class="small">© 2026 Studyflow. A fictional product made for Web Development.</p>
+    </footer>
+  </body>
+</html>

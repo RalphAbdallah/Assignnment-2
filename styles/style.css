@@ -1,0 +1,484 @@
+:root {
+  --blue-bg: rgb(184, 214, 240);
+  --blue-chip: #a7c9e7;
+  --blue-hover: rgb(150, 193, 231);
+  --blue-active: rgb(79, 154, 219);
+  --blue-accent: rgb(19, 117, 202);
+  --white: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #555555;
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 1rem;
+  --space-4: 1.5rem;
+  --space-5: 2rem;
+  --space-6: 3rem;
+
+  --radius-pill: 2.5rem;
+  --radius-card: 1.5rem;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding-top: 5.5rem;
+  font-family: sans-serif;
+  color: var(--text);
+  background-color: var(--blue-bg);
+  line-height: 1.5;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  justify-items: center;
+  gap: var(--space-5);
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+}
+
+p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 500;
+}
+
+.small {
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+.button,
+button {
+  display: inline-block;
+  background-color: var(--blue-bg);
+  color: var(--text);
+  border: 2px solid transparent;
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: inherit;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.button:hover,
+button:hover {
+  background-color: var(--blue-hover);
+}
+
+.button:active,
+button:active {
+  background-color: var(--blue-active);
+}
+
+.buttonOutline {
+  background-color: transparent;
+  border-color: var(--blue-chip);
+}
+
+.chip {
+  background-color: var(--blue-chip);
+  width: fit-content;
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-pill);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+nav {
+  position: fixed;
+  top: var(--space-3);
+  z-index: 10;
+  width: calc(100% - 2rem);
+  max-width: 25rem;
+  box-shadow: var(--shadow);
+  border-radius: var(--radius-pill);
+}
+
+.navDiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  padding: var(--space-2);
+  padding-left: var(--space-3);
+  border-radius: var(--radius-pill);
+}
+
+.navDivLeft {
+  display: flex;
+  gap: var(--space-1);
+}
+
+.navDivLeft a {
+  font-size: 0.875rem;
+  padding: 0 var(--space-1);
+}
+
+.navDiv .button {
+  font-size: 0.875rem;
+  padding: var(--space-1) var(--space-3);
+}
+
+.current {
+  color: var(--blue-accent);
+}
+
+main {
+  width: calc(100% - 2rem);
+  max-width: 72rem;
+  background-color: var(--white);
+  border-radius: var(--radius-card);
+  padding: var(--space-5) var(--space-4);
+
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "hero"
+    "features"
+    "steps"
+    "pricing"
+    "reviews"
+    "signup";
+  gap: var(--space-6);
+}
+
+section {
+  scroll-margin-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.hero     { grid-area: hero; }
+.features { grid-area: features; }
+.steps    { grid-area: steps; }
+.pricing  { grid-area: pricing; }
+.reviews  { grid-area: reviews; }
+.signup   { grid-area: signup; }
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.heroText > p:not(.chip) {
+  color: var(--text-muted);
+}
+
+.buttonGroup {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+.heroCard {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background-color: var(--blue-bg);
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+}
+
+.heroCardTitle {
+  font-weight: bold;
+  font-size: 1.125rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  background-color: var(--white);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-pill);
+}
+
+.dot {
+  flex-shrink: 0;
+  width: 0.875rem;
+  height: 0.875rem;
+  border-radius: 50%;
+  border: 2px solid var(--blue-accent);
+}
+
+.dot.done {
+  background-color: var(--blue-accent);
+}
+
+.progress {
+  height: 0.5rem;
+  background-color: var(--white);
+  border-radius: var(--radius-pill);
+  margin-top: var(--space-2);
+}
+
+.progressBar {
+  width: 33%;
+  height: 100%;
+  background-color: var(--blue-accent);
+  border-radius: var(--radius-pill);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+}
+
+.card {
+  flex: 1 1 14rem;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow);
+}
+
+.card p,
+.step p:not(.stepNumber),
+.plan li {
+  color: var(--text-muted);
+}
+
+.stepList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.step {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.stepNumber {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--blue-chip);
+  font-weight: bold;
+}
+
+.plans {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.plan {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-4);
+  border: 2px solid var(--blue-chip);
+  border-radius: var(--radius-card);
+}
+
+.planHighlight {
+  background-color: var(--blue-bg);
+  border-color: var(--blue-bg);
+}
+
+.planHighlight .button {
+  background-color: var(--white);
+}
+
+.planHighlight .button:hover {
+  background-color: var(--blue-hover);
+}
+
+.price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.price span {
+  font-size: 1rem;
+  font-weight: normal;
+  color: var(--text-muted);
+}
+
+.plan ul {
+  margin: 0;
+  padding-left: var(--space-4);
+  flex-grow: 1;
+}
+
+.reviewList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.review {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  background-color: var(--blue-bg);
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+}
+
+.reviewName {
+  font-weight: 500;
+  color: var(--blue-accent);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  padding: var(--space-4);
+  border-radius: var(--radius-card);
+  box-shadow: var(--shadow);
+}
+
+form p {
+  color: var(--text-muted);
+  margin-bottom: var(--space-2);
+}
+
+input {
+  width: 100%;
+  padding: var(--space-2) var(--space-3);
+  border: 2px solid var(--blue-chip);
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--blue-accent);
+}
+
+form button {
+  margin-top: var(--space-2);
+}
+
+footer {
+  width: calc(100% - 2rem);
+  max-width: 72rem;
+  padding-bottom: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+  text-align: center;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: var(--blue-accent);
+}
+
+.footerLinks {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--space-3);
+}
+
+@media (min-width: 48rem) {
+  h1 {
+    font-size: 2.75rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  nav {
+    top: 1.25rem;
+  }
+
+  .navDivLeft a {
+    font-size: 1rem;
+    padding: 0 var(--space-2);
+  }
+
+  main {
+    width: 80%;
+    padding: var(--space-6);
+
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "hero     hero"
+      "features features"
+      "steps    steps"
+      "pricing  pricing"
+      "reviews  signup";
+  }
+
+  .stepList {
+    flex-direction: row;
+  }
+
+  footer {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+@media (min-width: 64rem) {
+  .hero {
+    flex-direction: row;
+    align-items: center;
+    gap: var(--space-6);
+  }
+
+  .heroText {
+    flex: 3;
+  }
+
+  .heroCard {
+    flex: 2;
+  }
+
+  .plans {
+    flex-direction: row;
+  }
+}
